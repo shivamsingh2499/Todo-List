@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+body{
+    background: #ffffff;
+}
+main{
+    padding:3rem;
+}
+nav{
+   display:grid;
+   grid-template-columns: repeat(3,1fr);
+   
+}
+.info{
+    display:flex;
+    /* justify-content:space-between; */
+    align-items:center;
+}
+.info h2{
+    color: #5E5E5E;
+    font-size: 1.5rem;
+    font-weight: 700;
+
+}
+.info p{
+    color:#EF6161;
+    font-size: 1.5rem;
+    font-weight: 500;
+    
+}
+.title{
+    font-size: 4rem;
+    font-weight: 700;
+    color:#5E5E5E;
+    text-align: center;
+}
+.backTo{
+    align-self: center;
+    justify-self: end;
+    cursor: pointer;
+}
+.TaskWrap{
+    width:50rem;
+    margin-top: 6rem;
+    margin-left:15rem;
+    /* border: 2px solid red; */
+    
+}
+.task{
+    display: none;
+    cursor: pointer;
+        
+}
+.task img{
+    margin-bottom:3rem;
+    cursor: pointer;
+}
+.task p{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #B47AEA;
+    margin-left:1rem;
+    margin-bottom:3rem;
+    
+}
+.text{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    
+}
+.text img{
+    width:2.5rem;
+    cursor: pointer;
+    margin-left:-0.3rem;
+
+
+}
+.checkWrapper{
+    position: relative;
+    width: 2rem;
+    height:2rem;
+      margin-left:0.5rem ;
+      
+}
+input[type="checkbox"]{
+    width: 2rem;
+    height:2rem;
+    border:2rem solid #1E9CEA;
+    /* background:#1E9CEA; */
+    /* appearance: none; */
+     position: absolute;
+    top:0;
+    left:0;
+    opacity: 0;
+    cursor: pointer;
+     z-index: 1;
+}
+
+.checkbox{
+  
+    width:2rem;
+    height:2rem;
+    border:3px solid #1E9CEA;
+    border-radius:0.3rem;
+    cursor: pointer;
+    background:#fff;
+    /* background-image: url(../images/checkbox.png); */
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    transition: all 0.1s;
+}
+.checkbox img{
+    width:1.3rem;
+    transform: scale(0);
+    transition: all 0.1s;
+}
+
+.content{
+    margin-left:1rem;
+    font-size:1.5rem;
+    font-weight: 500;
+    color: #000000;
+    /* letter-spacing:0.1rem; */
+    text-transform:uppercase;
+   
+}
+input[type="checkbox"]:checked + .checkbox img{
+    
+     transform: scale(1);
+     
+}
+input[type="checkbox"]:checked + .checkbox{
+    background: #1E9CEA;
+    
+}
+
+
+input[type="checkbox"]:not(:checked) + .checkbox img{
+    
+     transform: scale(0);
+}
+input[type="checkbox"]:not(:checked) + .checkbox{
+    background: #FFF;
+    
+}
+input[type=checkbox]:checked  label.content{
+  text-decoration-line: line-through;
+}
+.showCompleted{
+    text-decoration-line: line-through;
+}
+.addTask{
+    margin-bottom: 2rem;
+ display: none;
+}
+input[type="text"]{
+    width:20rem;
+    height: 3rem;
+    outline: none;
+    border: 3px solid #B47AEA;
+    border-radius: 0.5rem;
+    padding:0.5rem;
+    color:#000000;
+    transition: all 0.3s;
+    font-size:1.2rem;
+    
+}
+
+.addTask button{
+    width:5rem;
+     height: 3rem;
+     cursor: pointer;
+      background: #B47AEA;
+      border-radius: 0.5rem;
+      outline: none;
+      border: none;
+      color:#fff;
+      font-weight: bold;
+      font-size: 1.2rem;
+}
+.addTask button:hover{
+  background:#fff;
+  color:#B47AEA;
+   border: 3px solid #B47AEA;
+}
+
+.showField{
+    display: block;
+
+}
+.showAddIcon{
+    display:flex;
+}
+.error{
+    border:3px solid red !important;
+}
+@media (max-width:1040px){
+    html{
+        font-size:12px;
+    }
+}
+@media (max-width:840px){
+    html{
+        font-size:10px;
+    }
+}
+@media (max-width:679px){
+    html{
+        font-size:8px;
+    }
+    .title{
+        font-size:24px;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .backTo img{
+        width:3.5rem;
+    }
+    .info img{
+        width:5rem;
+    }
+    .profile{
+        display:flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    .task img{
+        width:2rem;
+    }
+}
+@media (max-width:549px){
+    html{
+        font-size:6px;
+    }
+}
+@media (max-width:400px){
+  .title{
+        font-size:36px;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        margin-top:4rem;
+    }
+    .backTo img{
+        width:65rem;
+        margin-top:4rem;
+    }
+    .info{
+        display:none;
+    }
+   .task{
+       margin-top:15rem;
+   }
+    .task img{
+        width:4.5rem;
+        margin-left: 1.2rem;
+    }
+    .task p{
+        font-size:4.5rem;
+        
+    }
+    .task img{
+    margin-bottom:5rem;
+    cursor: pointer;
+}
+.text img{
+    width:7rem;
+    cursor: pointer;
+    /* margin-left:-5rem; */
+
+
+
+}
+.TaskWrap{
+    margin:2rem;
+}
+.checkbox{
+    margin-top:-1rem;
+    width:5rem;
+    height:5rem;
+}
+.content{
+    font-size:24px;
+    margin-left: 4.5rem;
+    text-align: wrap;
+}
+.addTask{
+    margin-top:15rem;
+}
+.addTask input{
+   width:40rem;
+   height:8rem;
+   font-size: 5rem;
+}
+.addTask button{
+     width:8rem;
+   height:8rem;
+   position:relative;
+   top:-0.5rem;
+   font-size:2rem;
+}
+}
+

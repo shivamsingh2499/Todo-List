@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/todo.css">
+    <link rel="stylesheet" href="./style/style.css">
+    <title>Task Do </title>
+</head>
+
+<body>
+    <main>
+        <nav>
+            <div class="info">
+                <img src="./Assets/Ellipse 1.svg" alt="Users Profile">
+                <div class="profile">
+                    <h2>Hi Good Morning</h2>
+                    <p>4 tasks pending</p>
+                </div>
+            </div>
+            <h1 class="title">TaskDo</h1>
+            <div class="backTo">
+                <img src="./Assets/backIcon.svg" alt="backIcon" height="40" width="40">
+            </div>
+        </nav>
+        <div class="TaskWrap">
+            <form class="addTask" onsubmit="handleSubmit(event)">
+                <input type="text" id="taskInput" placeholder="Enter The Task...">
+                <button type="submit">Add</button>
+            </form>
+            <div class="task showAddIcon" onclick="showAddField()">
+                <img src="./Assets/Group 1.svg" alt="Add new task">
+                <p>Add New Task</p>
+            </div>
+
+            <!-- <div class="text">
+                <img src="./Assets/Frame.svg" alt="remove completed task">
+                
+                <div class="checkWrapper">
+                    <input type="checkbox" onclick="markAsComplete()">
+                    <div class="checkbox">
+                        <img src="./Assets/checkbox.svg" alt="task has been completed">
+
+                    </div>
+
+                </div>
+                <p class="content">Morning Walk</p>
+
+            </div> -->
+
+        </div>
+    </main>
+</body>
+<script src="./style/script.js"></script>
+
+</html>
